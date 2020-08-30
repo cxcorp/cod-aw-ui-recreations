@@ -118,12 +118,12 @@ function App() {
       <div className={cx(styles['top-line'])}>ATLS_MIS_0108_5682</div>
 
       <div className="row justify-content-center pt-5">
-        <div className="col-11">
-          <div className="row">
-            <div className="col-3" />
-            <div className="col-6 px-5">
+        <div className="col-md-11">
+          {/* header titles & warning row */}
+          <div className="row justify-content-center">
+            <div className="col-xl-6 px-xl-5">
               <div className="row mb-4">
-                <div className="col-6">
+                <div className="col-md-6">
                   <TitleGroup
                     className="anim-shift-in anim-shift-in-0"
                     heading="KVA"
@@ -131,7 +131,7 @@ function App() {
                     subtitle="MISSION TYPE: HOSTAGE RESCUE"
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-md-6 pt-3 pt-xl-0">
                   <div
                     className={cx(
                       'anim-shift-in anim-shift-in-3',
@@ -148,15 +148,38 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="col-3" />
           </div>
 
           <div className="row">
+            {/* middle content */}
+            <div className="col-xl-6 mb-4 mb-xl-0 px-xl-5">
+              <VideoBlock
+                className="anim-shift-in anim-shift-in-2"
+                imgSrc="https://cdn.arstechnica.net/wp-content/uploads/sites/3/2016/11/b185b7c7-bf62-4604-9384-6321b7a6b7d2_COD_IW_beta.jpg"
+                imgAlt="Screenshot from Call of Duty"
+                feedName="ATLAS // FEED 02"
+                sourceDescription="SOURCED COVERT FOOTAGE - SPV // 1510 - 01"
+              />
+              <div className="row">
+                <Block
+                  dense
+                  className="col-xl-5 anim-shift-in anim-shift-in-2"
+                  lines="none"
+                >
+                  <Block.Main>
+                    <p className="mt-4 mb-0">ALL AVAILABLE INTEL - KVA</p>
+                    <p>ATLAS COVERT FEEDS - STRICTLY CONFIDENTIAL</p>
+                  </Block.Main>
+                </Block>
+              </div>
+            </div>
+
             {/* sidebar */}
-            <div className="col-3">
-              <div className="row mb-4">
+            {/* on desktop, show first (on the left), on mobile show after main content */}
+            <div className="col-xl-3 order-xl-first">
+              <div className="row">
                 <TextAndImageBlock
-                  className="col-12 anim-shift-in anim-shift-in-0"
+                  className="col-12 col-md-6 col-xl-12 mb-4 anim-shift-in anim-shift-in-0"
                   image={
                     <img
                       src="https://vignette.wikia.nocookie.net/callofduty/images/e/eb/Samuel_Abidoyo_AW.png/revision/latest?cb=20141120015458"
@@ -187,10 +210,8 @@ function App() {
                     at the top of his class.
                   </MiniP>
                 </TextAndImageBlock>
-              </div>
-              <div className="row">
                 <Block
-                  className="col-12 anim-shift-in anim-shift-in-1"
+                  className="col-12 col-md-6 col-xl-12 anim-shift-in anim-shift-in-1"
                   lines="both"
                 >
                   <Block.Before
@@ -217,31 +238,8 @@ function App() {
               </div>
             </div>
 
-            {/* middle content */}
-            <div className="col-6 px-5">
-              <VideoBlock
-                className="anim-shift-in anim-shift-in-2"
-                imgSrc="https://cdn.arstechnica.net/wp-content/uploads/sites/3/2016/11/b185b7c7-bf62-4604-9384-6321b7a6b7d2_COD_IW_beta.jpg"
-                imgAlt="Screenshot from Call of Duty"
-                feedName="ATLAS // FEED 02"
-                sourceDescription="SOURCED COVERT FOOTAGE - SPV // 1510 - 01"
-              />
-              <div className="row">
-                <Block
-                  dense
-                  className="col-5 anim-shift-in anim-shift-in-2"
-                  lines="none"
-                >
-                  <Block.Main>
-                    <p className="mt-4 mb-0">ALL AVAILABLE INTEL - KVA</p>
-                    <p>ATLAS COVERT FEEDS - STRICTLY CONFIDENTIAL</p>
-                  </Block.Main>
-                </Block>
-              </div>
-            </div>
-
             {/* right sidebar */}
-            <div className="col-3">
+            <div className="col-xl-3">
               <Block
                 className="anim-shift-in anim-shift-in-4"
                 dense

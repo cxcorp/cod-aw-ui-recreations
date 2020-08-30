@@ -52,7 +52,7 @@ const Warning = ({ className, title, subsubtitle, subtitle }: Props) => {
         <p className={styles.title}>{title}</p>
       </div>
       <div className={styles['third-row']}>
-        <p className={styles.subsubtitle}>{subsubtitle}</p>
+        <p className={cx(styles.subsubtitle, 'mb-0')}>{subsubtitle}</p>
       </div>
     </div>
   )

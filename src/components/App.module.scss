@@ -77,6 +77,11 @@
 .warnings {
   transform: translateY(60%);
   margin-right: 3rem;
+
+  @media screen and (max-width: 768px) {
+    transform: translateY(0);
+    margin-left: 3rem;
+  }
 }
 
 .warnings-container {
