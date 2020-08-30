@@ -92,7 +92,21 @@ function App() {
 
   const [animated, setAnimated] = useState(false)
   useEffect(() => {
-    setAnimated(true)
+    const startAnimsIfTabVisible = () => {
+      if (document.visibilityState === 'visible') {
+        setAnimated(true)
+        return true
+      }
+      return false
+    }
+
+    if (startAnimsIfTabVisible()) {
+      return
+    }
+
+    document.addEventListener('visibilitychange', startAnimsIfTabVisible)
+    return () =>
+      document.removeEventListener('visibilitychange', startAnimsIfTabVisible)
   }, [])
 
   return (
