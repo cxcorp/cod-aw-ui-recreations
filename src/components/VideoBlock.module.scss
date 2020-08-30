@@ -1,0 +1,28 @@
+@use '../colors' as colors;
+
+.subtitle {
+  background: colors.$color-grey;
+  color: colors.$color-white;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  padding: 0.15rem 1rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.play-icon {
+  width: 0.5rem;
+  fill: colors.$color-red;
+  margin-right: 0.5rem;
+  transform: translateY(-1px);
+}
+
+.play-icon,
+.description {
+  display: inline;
+}
+
+.description {
+  font-weight: 600;
+  color: colors.$color-grey;
+}

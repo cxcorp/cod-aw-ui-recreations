@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.7rem;
+}
+
+.main {
+  text-align: right;
+}
+
+.main,
+.image-label-container {
+  padding: 0 calc(5px + 0.5rem);
+}
+
+.image-block {
+  flex: 1 0 auto;
+  width: 35%;
+}
+
+.image-label {
+  margin-top: 0.3rem;
+  padding: 0;
+  background: #d15342;
+  display: block;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+}

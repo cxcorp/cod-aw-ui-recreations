@@ -1,0 +1,98 @@
+@use '../colors';
+
+.first-row {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  flex: 0 0 3.75rem;
+  width: 3.75rem;
+  height: 3.33rem;
+  fill: colors.$color-red;
+  margin-bottom: -0.2rem;
+}
+
+.icon-container {
+  grid-area: icon;
+}
+
+$subtitle-size: 0.9rem;
+.subtitle {
+  flex: 1 0 auto;
+  margin: 0 0.65rem;
+  font-weight: 600;
+  font-size: $subtitle-size;
+  line-height: $subtitle-size;
+  letter-spacing: 4px;
+  color: colors.$color-grey;
+}
+
+.warning-pattern {
+  flex: 1 1 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    colors.$color-red,
+    colors.$color-red 3px,
+    transparent 3px,
+    transparent 6px
+  );
+  height: $subtitle-size;
+  align-self: flex-end;
+}
+
+.second-row {
+  $cube-size: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: colors.$color-red;
+  color: colors.$color-white;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.05rem;
+  padding: 0.6rem 0;
+  letter-spacing: 5px;
+  overflow-x: hidden;
+  text-align: center;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    display: inline-block;
+    width: $cube-size;
+    height: $cube-size;
+    background: colors.$color-white;
+    margin: 0 1rem;
+  }
+
+  &::after {
+    content: '';
+    flex-shrink: 0;
+    display: inline-block;
+    width: $cube-size;
+    height: $cube-size;
+    background: colors.$color-white;
+    margin: 0 1rem;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.third-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.subsubtitle {
+  font-size: 0.55rem;
+  line-height: 0.55rem;
+  letter-spacing: 1px;
+  background: colors.$color-grey;
+  color: colors.$color-white-darker;
+  padding: 0.2rem 0.4rem;
+  text-align: right;
+}
